@@ -102,9 +102,15 @@ SELECT name from city WHERE id= 211
 -- So I'm off to add one to the population I find
 -- In a city of ninety-one thousand and now, eighty five.
 
+-- 91085 - 1 = 91084
 
 -- We're counting on you, gumshoe. Find out where she's headed, send us the info, and we'll be sure to meet her at the gates with bells on.
 
+SELECT * from city WHERE population= 91084
+SELECT * from country WHERE code= 'USA'
+
+--4060	"Santa Monica"	"USA"	"California"	91084
+-- "USA"	"United States"	"North America"	"North America"	9.36352e+06	1776	278357000	77.1	8510700.00	8110900.00	"United States"	"Federal Republic"	"George W. Bush"	3813	"US"
 
 
--- She's in ____________________________!
+-- She's in Santa Monica - USA!
