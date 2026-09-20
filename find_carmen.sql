@@ -60,8 +60,23 @@ SELECT * from city WHERE countrycode='SMR'
 -- Clue #5: Oh no, she pulled a switch – there are two cities with very similar names, but in totally different
 -- parts of the globe! She's headed to South America as we speak; go find a city whose name is like the one we were
 -- headed to, but doesn't end the same. Find out the city, and do another search for what country it's in. Hurry!
+SELECT * from city WHERE name LIKE 'Serra%'
 
+-- Answer: 
+-- 265	"Serra"	"BRA"	"Espï¿½rito Santo"	302666
+-- 3170	"Serravalle"	"SMR"	"Serravalle/Dogano"	4802
 
+--one solution
+SELECT * from country WHERE code = 'SMR'
+
+--other solution
+SELECT * from country WHERE code = 'BRA' AND region = 'South America'
+
+-- Answer: 
+-- "SMR"	"San Marino"	"Europe"	"Southern Europe"	61	885	27000	81.1	510.00		"San Marino"	"Republic"		3171	"SM"
+-- "BRA"	"Brazil"	"South America"	"South America"	8.547403e+06	1822	170115000	62.9	776739.00	804108.00	"Brasil"	"Federal Republic"	"Fernando Henrique Cardoso"	211	"BR"
+
+-- The answer is : Brazil
 
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport, and is headed towards
  -- the capital! Look up the country's capital, and get there pronto! Send us the name of where you're headed and we'll
