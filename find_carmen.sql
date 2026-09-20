@@ -49,8 +49,13 @@ SELECT * from countrylanguage WHERE language='Italian' AND percentage= 100
  -- There are only two cities she could be flying to in the country. One is named the same as the country – that
  -- would be too obvious. We're following our gut on this one; find out what other city in that country she might
  --  be flying to.
+SELECT * from city WHERE countrycode='SMR'
 
+--Answer:
+-- 3170	"Serravalle"	"SMR"	"Serravalle/Dogano"	4802
+-- 3171	"San Marino"	"SMR"	"San Marino"	2294
 
+-- So the exact answer: Serravalle
 
 -- Clue #5: Oh no, she pulled a switch – there are two cities with very similar names, but in totally different
 -- parts of the globe! She's headed to South America as we speak; go find a city whose name is like the one we were
