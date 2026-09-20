@@ -19,9 +19,31 @@ SELECT * from countrylanguage WHERE countrycode='VAT' AND isofficial='true'
 -- Clue #3: We have new news on the classes Carmen attended – our gumshoes tell us she's moved on
 -- to a different country, a country where people speak only the language she was learning. Find out which
 --  nearby country speaks nothing but that language.
+SELECT * from countrylanguage WHERE language='Italian'
+
+-The exact one, answer 2:
+SELECT * from countrylanguage WHERE language='Italian' AND percentage= 100
 
 
+--Answer 1: 
+-- "ITA"	"Italian"	true	94.1
+-- "SMR"	"Italian"	true	100
+-- "VAT"	"Italian"	true	0
+-- "ARG"	"Italian"	false	1.7
+-- "AUS"	"Italian"	false	2.2
+-- "LIE"	"Italian"	false	2.5
+-- "BEL"	"Italian"	false	2.4
+-- "BRA"	"Italian"	false	0.4
+-- "LUX"	"Italian"	false	4.6
+-- "MCO"	"Italian"	false	16.1
+-- "CHE"	"Italian"	true	7.7
+-- "CAN"	"Italian"	false	1.7
+-- "FRA"	"Italian"	false	0.4
+-- "DEU"	"Italian"	false	0.7
+-- "USA"	"Italian"	false	0.6
 
+--Answer 2: 
+-- "SMR"	"Italian"	true	100
 
 -- Clue #4: We're booking the first flight out – maybe we've actually got a chance to catch her this time.
  -- There are only two cities she could be flying to in the country. One is named the same as the country – that
