@@ -81,8 +81,14 @@ SELECT * from country WHERE code = 'BRA' AND region = 'South America'
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport, and is headed towards
  -- the capital! Look up the country's capital, and get there pronto! Send us the name of where you're headed and we'll
  -- follow right behind you!
+SELECT code, name, capital from country WHERE name = 'Brazil'
 
+-- SELECT * from city WHERE id= 211
 
+SELECT name from city WHERE id= 211
+-- Answer 1 : "BRA"	"Brazil"	211
+-- Answer 2: 211	"Brasï¿½lia"	"BRA"	"Distrito Federal"	1969868
+-- Exact Answer : Brasï¿½lia
 
 -- Clue #7: She knows we're on to her – her taxi dropped her off at the international airport, and she beat us to
  -- the boarding gates. We have one chance to catch her, we just have to know where she's heading and beat her to the
